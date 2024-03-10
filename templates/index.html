@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mask Detector</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom right, red, gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #video-container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+        }
+        #video-stream {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+        #label {
+            position: absolute;
+            bottom: 30px;
+            right: 126px;
+            font-size: 24px;
+        }
+        h1 {
+            position: absolute;
+            top: 33px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 36px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Mask Detector</h1>
+    <div id="video-container">
+        <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Video Stream">
+    </div>
+    <div id="label">
+        <p>This app helps the clients to check wheather a person coming in front of this camera has worn a face mask or not</p>
+    </div>
+</body>
+</html>
+
